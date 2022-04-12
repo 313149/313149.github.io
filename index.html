@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="resources/hbicon.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">HotBeans;</span>
+                    <span class="profession">Web development</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="index.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="profiles.html">
+                            <i class='bx bx-user-pin icon'></i>
+                            <span class="text nav-text">Profiles</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="careers.html">
+                            <i class='bx bx-briefcase icon' ></i>
+                            <span class="text nav-text">Careers</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="courses.html">
+                            <i class='bx bx-pen icon'></i>
+                            <span class="text nav-text">Courses</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="contact.html">
+                            <i class='bx bx-phone icon'></i>
+                            <span class="text nav-text">Contact Us</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="logout.html">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+                
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Home</div>
+            <div class="intro1">
+            <h1>A Little About Us</h1>
+            <p>Established in 2016, Hotbeans* is a software warehouse specialising in website design. Over the years however we are expanding into native apps for mobile devices.  Over the years we have seen an expansion in the app market in retail, education, health care, manufacturing and agriculture. We have a niche market in software for the agriculture market in particular working closely with the NFU (National Farmers Union). </p><br>
+            <img src="resources/intropic.png" width="100%" class="intropic" alt="Image of woman at laptop"><br>
+                <div class="introright">
+                 <h1>What are we looking for?</h1>
+                 <p>Are you someone who have completed training courses or qualifications related to web development and are now looking for a job as a web developer? You have come to the right place, check out our Job Roles section and is you are interested, apply for one of our jobs by sending us a summary of your details. New to website design? Please check out our recommended online courses.  </p>
+                </div>
+            </div>
+
+
+
+
+
+
+            
+
+
+    </section>
+    <div>
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>

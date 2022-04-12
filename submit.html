@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+  <!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+        <br><br><br><br><br>
+        <div class="submitpopupcontainer">
+            <div class="submitpopup">
+                <div class="submitcontent">
+                    <h1>Thank you for Submitting!</h1><br>
+                    <p1>Your form has been sent, please hang tight as we work on getting back to you. In the meanwhile please feel free to browse our website and discover more!</p1><br><br><br>
+                    <a href="index.html"><button class="btnHome">Back to Home</button></a><br>
+                    <img class="sentgif" src="resources/sent.gif" alt="Animation of letter being sent">
+                </div>
+            </div>
+        </div>
+    <div>
+    <script>
+        const body = document.querySelector('body'),
+      sidebar = body.querySelector('nav'),
+      toggle = body.querySelector(".toggle"),
+      searchBtn = body.querySelector(".search-box"),
+      modeSwitch = body.querySelector(".toggle-switch"),
+      modeText = body.querySelector(".mode-text");
+
+
+toggle.addEventListener("click" , () =>{
+    sidebar.classList.toggle("close");
+})
+
+searchBtn.addEventListener("click" , () =>{
+    sidebar.classList.remove("close");
+})
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+    
+    if(body.classList.contains("dark")){
+        modeText.innerText = "Light mode";
+    }else{
+        modeText.innerText = "Dark mode";
+        
+    }
+});
+    </script>
+
+</body>
+</html>
